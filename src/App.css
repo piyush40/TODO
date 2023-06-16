@@ -1,16 +1,13 @@
-*
-{
+* {
   font-family: Nunito, sans-serif;
-  
 }
-
 
 .App {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: 	 #e6fff7
+  background-color: #e6fff7;
 }
 
 .container {
@@ -27,11 +24,12 @@
 .todoForm {
   display: flex;
   justify-content: space-around;
-  width: 490px;
+  max-width: 600px; /* Adjust the maximum width based on your design */
+  width: 100%;
 }
 
 input {
-  width: 80%;
+  width: 100%;
   padding: 10px;
   border-radius: 20px;
   border: none;
@@ -43,20 +41,51 @@ button {
   border-radius: 20px;
   margin: 0 5px;
 }
+
 .allTodos {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .singleTodo {
   border-radius: 50px;
   margin: 15px 0;
   background-color: #c6ccd1;
   padding: 3px 14px;
   display: flex;
-  width: 450px;
+  width: 100%;
   align-items: center;
 }
+
 .todoText {
   flex: 1;
 }
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    height: auto;
+    padding: 10px;
+  }
+
+  .todoForm {
+    flex-wrap: wrap;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    margin: 5px 0;
+    width: 40%;
+  }
+
+  .singleTodo {
+    width: 100%;
+  }
+}
+
+
